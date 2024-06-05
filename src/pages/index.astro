@@ -5,6 +5,7 @@ import Card from '../components/Card.astro';
 
 const response = await fetch('https://xtool.zendesk.com/embeddable/config');
 const baseData = await response.json();
+console.log('base', baseData);
 const name = "Astro";
 ---
 
@@ -15,6 +16,7 @@ const name = "Astro";
 			<h1>你好 {name}!</h1>  <!-- 输出 <h1>你好 Astro!</h1> -->
 		</div>
 		<div>{baseData?.messenger?.appId}</div>
+		<div style="color: blue;">{baseData?.messenger?.integrationId}</div>
 		<ul role="list" class="link-card-grid">
 			<Card
 				href="https://docs.astro.build/"
