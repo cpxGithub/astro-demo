@@ -1,4 +1,5 @@
 ---
+import { t } from 'i18next';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
@@ -11,6 +12,7 @@ const name = "Astro";
 
 <Layout title="Welcome to Astro.">
 	<main>
+		<h1>页面---{t('helloReact')}</h1>
 		<h1>这是干啥呢</h1>
     <a href="/about"  rel="noopener noreferrer">跳转about</a>
 		<div>
